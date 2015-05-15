@@ -35,9 +35,18 @@
                                 <td>:&nbsp;&nbsp;</td>
                                 <td><textarea class="form-controlx" name="alamat" type="text" required><?php echo $alamat; ?></textarea></td>
                                 <td width="20"></td>
-                                <td>Kode Tipe Sewa&nbsp;&nbsp;</td>
+                                <td>Tipe Sewa&nbsp;&nbsp;</td>
                                 <td>:&nbsp;&nbsp;</td>
-                                <td><input class="form-controlx" name="kd_tipe_sewa" type="text" required></td>
+                                
+                                <td><select name="tipe_sewa">
+                                    <?php
+                                        foreach ($tipe_sewa as $row)
+                                        {
+                                            echo "<option value='$row->nama_tipe_sawa'>$row->nama_tipe_sawa</option>";
+                                        }
+                                    ?>
+                                    </select>
+                                </td>
                             </tr>
                             <tr>
                                 <td >Telepon&nbsp;&nbsp;</td>
@@ -80,6 +89,7 @@
                                 <td></td>
                                 <td><br><input type="submit" class="btn btn-primary" name="add" id="submit" value="PROSES"></td>
                             </tr>
+                            
                         </table>
                         </div>
                     </form>

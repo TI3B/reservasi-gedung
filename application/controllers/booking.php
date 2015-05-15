@@ -25,17 +25,22 @@ class Booking extends CI_Controller
 	{
 		$id = $this->uri->segment(3);
 		$penyewa = $this->penyewa_m->selectBy('kd_data_penyewa', $id)->result();
+		$tipe_sewa = $this->tipe_sewa_m->selectAll();
+
 		foreach ($penyewa as $row)
 		{
 			$data['kd_data_penyewa'] = $row->kd_data_penyewa;
 			$data['nama_penyewa'] = $row->nama_penyewa;
 			$data['alamat'] = $row->alamat;
 			$data['no_telp'] = $row->no_telp;
-			// $alumni = $this->alumni_m->selectBy('id_alumni', $row->id_alumni)->row();
-			// $data['nama'] = $alumni->nama;
+			// $tipe_sewa = $this->tipe_sewa_m->selectBy('kd_tipe_sewa', $row->kd_tipe_sewa)->row();
+			// $data['nama_tipe_sawa'] = $tipe_sewa->nama_tipe_sawa;
 			// $data['judul'] = $row->judul;
 			// $data['isi_info'] = $row->isi_info;
         }
+
+        $data['tipe_sewa'] = $this->tipe_sewa_m->selectAll();
+
 		$data['title'] = 'Booking';
 		$data['main_view'] = 'booking_v';
 		$this->load->view('templatemenu_v', $data);
