@@ -19,21 +19,30 @@
                                 <td width="20"></td>
                                 <td>Kode Booking&nbsp;&nbsp;</td>
                                 <td>:&nbsp;&nbsp;</td>
-                                <td><input class="form-controlx" name="kd_booking" type="text" required></td>
+                                <td><input class="form-controlx" name="kd_booking" type="text" required>
+                                    
+                                 </td>
                             </tr>
                             <tr >
                                 <td>Nama</td>
                                 <td>:&nbsp;&nbsp;</td>
-                                <td><textarea class="form-controlx" name="nama_penyewa" type="text" required><?php echo $nama_penyewa; ?></textarea></td>
+                                <td><?php echo $nama_penyewa; ?></td>
                                 <td width="20"></td>
                                 <td>Kode Gedung&nbsp;&nbsp;</td>
                                 <td>:&nbsp;&nbsp;</td>
-                                <td><input class="form-controlx" name="kd_gedung" type="text" required></td>
+                                <td><select name="gedung">
+                                    <?php
+                                        foreach ($gedung as $row)
+                                        {
+                                            echo "<option value='$row->kd_gedung'>$row->kd_gedung</option>";
+                                        }
+                                    ?>
+                                    </select></td>
                             </tr>
                             <tr>
                                 <td >Alamat</td>
                                 <td>:&nbsp;&nbsp;</td>
-                                <td><textarea class="form-controlx" name="alamat" type="text" required><?php echo $alamat; ?></textarea></td>
+                                <td><?php echo $alamat; ?></td>
                                 <td width="20"></td>
                                 <td>Tipe Sewa&nbsp;&nbsp;</td>
                                 <td>:&nbsp;&nbsp;</td>
@@ -42,7 +51,7 @@
                                     <?php
                                         foreach ($tipe_sewa as $row)
                                         {
-                                            echo "<option value='$row->nama_tipe_sawa'>$row->nama_tipe_sawa</option>";
+                                            echo "<option value='$row->kd_tipe_sewa'>$row->kd_tipe_sewa</option>";
                                         }
                                     ?>
                                     </select>
@@ -51,7 +60,7 @@
                             <tr>
                                 <td >Telepon&nbsp;&nbsp;</td>
                                 <td>:&nbsp;&nbsp;</td>
-                                <td><textarea class="form-controlx" name="no_telp" type="text" required><?php echo $no_telp; ?></textarea></td>
+                                <td><?php echo $no_telp; ?></td>
                                 <td width="20"></td>
                                 <td>Harga&nbsp;&nbsp;</td>
                                 <td>:&nbsp;&nbsp;</td>

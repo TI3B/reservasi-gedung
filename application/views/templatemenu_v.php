@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,6 +27,13 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!-- jQuery CDN -->
+    <script src="<?php echo base_url(); ?>js/jquery.min.js"></script>
+
+    <!-- Zabuto Calendar -->
+    <script src="<?php echo base_url(); ?>js/calendar/zabuto_calendar.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/calendar/zabuto_calendar.min.css">
 
 </head>
 
@@ -101,7 +107,7 @@
     </div>
 
     <!-- jQuery -->
-    <script src="<?php echo base_url(); ?>js/jquery.js"></script>
+    <!--<script src="<?php echo base_url(); ?>js/jquery.js"></script>-->
 
     <!-- Bootstrap Core JavaScript -->
     <script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>

@@ -24,7 +24,7 @@ class Penyewa extends CI_Controller
                                 <td>$row->alamat</td>
                                 <td>$row->no_telp</td>
                                 <td><a href='".base_url()."penyewa/view/$row->kd_data_penyewa'><font color='blue'>Update</a></font></td>
-                                <td><a href='".base_url()."booking/view/$row->kd_data_penyewa'><font color='blue'>Booking</a></font></td>					
+                                					
                                 
                             </tr>";
             $no++;
