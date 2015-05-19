@@ -9,7 +9,7 @@ class Menu extends CI_Controller
 		// $this->load->model('berita_m');
 		// $this->load->model('info_m');
 		$this->load->model('transaksi_m');
-
+		$this->load->model('penyewa_m');
 	}
 
 	function index()
@@ -32,17 +32,19 @@ class Menu extends CI_Controller
 
 	function service()
 	{
-
 		$transaksi = $this->transaksi_m->selectAll();
 		$data = array();
 		foreach ($transaksi as $row)
 		{
 			$tanggal_booking = substr($row->tanggal_booking,0,10);
-			$data[]['date'] = $tanggal_booking;
-			$data[]['badge'] = true;
-			$data[]['title'] = "title";
-			$data[]['body'] = "<p class=\"lead\">Body<\/p><p>bla bla.<\/p>";
-			$data[]['footer'] = "footer"; 
+			$penyewa = $this->penyewa_m->selectBy('kd_data_penyewa', $row->kd_data_penyewa)->row();
+			$nama_penyewa = $penyewa->nama_penyewa;
+			$data[] = array('date' => $tanggal_booking
+						  ,'badge' => true
+						  ,'title' => "Terbooking dengan kode booking : ".$row->kd_booking_gedung
+						  ,'body' => "<p class=\"lead\">Terbooking, dengan keterangan <b>$row->keterangan</b><br>Atas Nama <b>$nama_penyewa</b></p>"
+						  ,'footer' => ""); 
+			
 		}
 		echo json_encode($data);
 	}
