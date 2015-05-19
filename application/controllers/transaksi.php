@@ -44,7 +44,7 @@ class Transaksi extends CI_Controller
                                 <td>$row->jumlah_tamu</td>
                                 <td>$row->keterangan</td>
                                 <td>$row->lunas</td>
-                                					
+                                <td><a href='".base_url()."penyewa/view/$row->kd_data_penyewa'><font color='blue'>Update</a></font></td>					
                                 
                             </tr>";
 
