@@ -109,6 +109,11 @@
     <!-- jQuery -->
     <!--<script src="<?php echo base_url(); ?>js/jquery.js"></script>-->
 
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/jquery-ui-1.10.4.custom.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/jquery-ui-1.10.4.custom.min.css">
+
+    <script type="text/javascript" src="<?php echo base_url(); ?>js/jquery-ui-1.10.4.custom.js"></script>
+
     <!-- Bootstrap Core JavaScript -->
     <script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
 

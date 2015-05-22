@@ -24,8 +24,8 @@
                                 <th>Nama Penyewa</th>
                                 <th>Nama Gedung</th>
                                 <th>Tipe Sewa</th>
-                                <th>Tanggal Booking</th>
                                 <th>Tanggal Sewa</th>
+                                <th>Tanggal Booking</th>
                                 <th>Durasi</th>
                                 <th>Jumlah Tamu</th>
                                 <th>Keterangan</th>

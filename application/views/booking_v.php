@@ -69,7 +69,7 @@
                             <tr>
                                 <td >Tanggal Sewa&nbsp;&nbsp;</td>
                                 <td>:&nbsp;&nbsp;</td>
-                                <td><input class="form-controlx" name="tanggal_booking" type="text" required></td>
+                                <td><input class="form-controlx datepicker" name="tanggal_booking" type="text" required></td>
                                 <td width="20"></td>
                                 <td>Tanggal Booking&nbsp;&nbsp;</td>
                                 <td>:&nbsp;&nbsp;</td>
@@ -111,4 +111,11 @@
         </div>
     </header>
 
-    
+    <script>
+  $(function() {
+    $( ".datepicker" ).datepicker(
+        {
+            dateFormat:'yy-mm-dd'
+        });
+  });
+  </script>
