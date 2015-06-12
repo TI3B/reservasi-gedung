@@ -34,7 +34,7 @@
                                     <?php
                                         foreach ($gedung as $row)
                                         {
-                                            echo "<option value='$row->kd_gedung'>$row->kd_gedung</option>";
+                                            echo "<option value='$row->kd_gedung'>$row->nama_gedung</option>";
                                         }
                                     ?>
                                     </select></td>
@@ -44,19 +44,20 @@
                                 <td>:&nbsp;&nbsp;</td>
                                 <td><textarea disabled="true" class="form-controlx" name="alamat" type="text" required><?php echo $alamat; ?></textarea></td>
                                 <td width="20"></td>
-                                <td>Tipe Sewa&nbsp;&nbsp;</td>
+                                <td>Kode Sewa&nbsp;&nbsp;</td>
                                 <td>:&nbsp;&nbsp;</td>
                                 
                                 <td><select name="tipe_sewa">
                                     <?php
                                         foreach ($tipe_sewa as $row)
                                         {
-                                            echo "<option value='$row->kd_tipe_sewa'>$row->kd_tipe_sewa</option>";
+                                            echo "<option value='$row->kd_tipe_sewa'>$row->nama_tipe_sawa</option>";
                                         }
                                     ?>
                                     </select>
                                 </td>
                             </tr>
+                            
                             <tr>
                                 <td >Telepon&nbsp;&nbsp;</td>
                                 <td>:&nbsp;&nbsp;</td>
@@ -66,23 +67,33 @@
                                 <td>:&nbsp;&nbsp;</td>
                                 <td><input class="form-controlx" name="harga" type="text" required></td>
                             </tr>
+
                             <tr>
                                 <td >Tanggal Sewa&nbsp;&nbsp;</td>
                                 <td>:&nbsp;&nbsp;</td>
                                 <td><input class="form-controlx datepicker" name="tanggal_booking" type="text" required></td>
                                 <td width="20"></td>
-                                <td>Tanggal Booking&nbsp;&nbsp;</td>
-                                <td>:&nbsp;&nbsp;</td>
-                                <td><input class="form-controlx" name="tanggal_sewa" type="text" required value="<?php echo date('Y-m-d H:i:s'); ?>"></td>
-                            </tr>
-                            <tr>
                                 <td >Durasi&nbsp;&nbsp;</td>
                                 <td>:&nbsp;&nbsp;</td>
-                                <td><input class="form-controlx" name="durasi" type="text" required></td>
+                                <td><input class="form-controlx" name="durasi" type="text" required value="1"></td>
+                            </tr>
+                            <tr>
+                                <td>Tanggal Booking&nbsp;&nbsp;</td>
+                                <td>:&nbsp;&nbsp;</td>
+                                <td><input class="form-controlx" name="tanggal_sewa" type="text" required value="<?php echo date('Y-m-d H:i:s ', time()+60*60*5); ?>"></td>
+                                
                                 <td width="20"></td>
                                 <td>Jumlah Tamu&nbsp;&nbsp;</td>
                                 <td>:&nbsp;&nbsp;</td>
-                                <td><input class="form-controlx" name="jumlah_tamu" type="text" required></td>
+                                <td>
+                                    <select name="jumlah_tamu">
+                                    <option value="100"> 100 orang</option>
+                                    <option value="150"> 150 orang</option>
+                                    <option value="200"> 200 orang</option>
+                                    <option value="250"> 250 orang</option>
+                                    </select>
+                                    <!-- <input class="form-controlx" name="jumlah_tamu" type="text" required> -->
+                                </td>
                             </tr>
                             <tr>
                                 <td >Keterangan&nbsp;&nbsp;</td>
