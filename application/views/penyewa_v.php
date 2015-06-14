@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="intro-text">
-                        <span class="skills"><strong>DATA PEMESAN GEDUNG</strong></span>
+                        <span class="skills"><strong>DATA PEMESAN</strong></span>
                     </div>
                     <br><br>
                     <div class="tabel">
